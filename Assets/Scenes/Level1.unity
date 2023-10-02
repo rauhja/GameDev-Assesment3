@@ -196,6 +196,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c2ed944c6dd4cdf97f686259cf872a, type: 3}
+--- !u!1 &378725758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4567459784166489842, guid: 70f33f6fb387b4a4a91ecf61f6cea6de, type: 3}
+  m_PrefabInstance: {fileID: 4567459784545196940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &378725763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378725758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacf65b81361448eaa754ddff705fff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &417704041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4567459784166489614, guid: 70f33f6fb387b4a4a91ecf61f6cea6de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4567459784166489842, guid: 70f33f6fb387b4a4a91ecf61f6cea6de, type: 3}
       propertyPath: m_Name
       value: PacStudent
@@ -1358,7 +1380,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4567459784166489842, guid: 70f33f6fb387b4a4a91ecf61f6cea6de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378725763}
   m_SourcePrefab: {fileID: 100100000, guid: 70f33f6fb387b4a4a91ecf61f6cea6de, type: 3}
 --- !u!1001 &6447993885788280091
 PrefabInstance:

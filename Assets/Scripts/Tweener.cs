@@ -7,6 +7,7 @@ public class Tweener : MonoBehaviour
     private Tween activeTween;
     private Vector2[] waypoints;
     private int currentWaypoint = 0;
+    public float speed;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Tweener : MonoBehaviour
              new Vector2(-7.5f, 9.5f),
              new Vector2(-12.5f, 9.5f)
         };
+        AddTween();
     }
 
     // Update is called once per frame
@@ -33,16 +35,18 @@ public class Tweener : MonoBehaviour
             else
             {
                 activeTween.Target.position = activeTween.EndPos;
-                activeTween = null;
+                AddTween();
             }
         }
     }
 
-    public void AddTween(Transform targetObject, Vector2 startPos, Vector3 endPos, float duration)
+    void AddTween()
     {
-        if (activeTween == null)
-        {
-            activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
-        }
+        Vector2 startPos = waypoints[currentWaypoint];
+        Vector2 endPos = waypoints[(currentWaypoint + 1) % waypoints.Length];
+        var duration = Vector2.Distance(startPos, endPos) / speed;
+
+        activeTween = new Tween(transform, startPos, endPos, Time.time, duration);
+        currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
     }
 }
