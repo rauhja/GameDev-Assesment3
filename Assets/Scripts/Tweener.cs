@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Tweener : MonoBehaviour
@@ -8,6 +9,7 @@ public class Tweener : MonoBehaviour
     private Vector2[] waypoints;
     private int currentWaypoint = 0;
     public float speed;
+    private Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class Tweener : MonoBehaviour
              new Vector2(-7.5f, 9.5f),
              new Vector2(-12.5f, 9.5f)
         };
+        animator = GetComponent<Animator>();
         AddTween();
     }
 
@@ -47,6 +50,17 @@ public class Tweener : MonoBehaviour
         var duration = Vector2.Distance(startPos, endPos) / speed;
 
         activeTween = new Tween(transform, startPos, endPos, Time.time, duration);
+        
+        Vector2 direction = endPos - startPos;
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            animator.SetTrigger(direction.x > 0 ? "WalkRightAnim" : "WalkLeftAnim");
+        }
+        else
+        {
+            animator.SetTrigger(direction.y > 0 ? "WalkUpAnim" : "WalkDownAnim");
+        }
+        
         currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
     }
 }
