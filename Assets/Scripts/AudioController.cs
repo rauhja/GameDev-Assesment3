@@ -5,13 +5,12 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     public AudioClip[] backgroundMusic;
-    private AudioSource audioSource;
+    private AudioSource musicAudioSource;
     
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-
+        musicAudioSource = GetComponent<AudioSource>();
         PlayIntroMusic();
     }
 
@@ -23,30 +22,30 @@ public class AudioController : MonoBehaviour
 
     void PlayIntroMusic()
     {
-        audioSource.clip = backgroundMusic[0];
-        audioSource.Play();
+        musicAudioSource.clip = backgroundMusic[0];
+        musicAudioSource.Play();
         
         Invoke(nameof(PlayMainLoop), backgroundMusic[0].length);
     }
 
     void PlayMainLoop()
     {
-        audioSource.clip = backgroundMusic[1];
-        audioSource.loop = true;
-        audioSource.Play();
+        musicAudioSource.clip = backgroundMusic[1];
+        musicAudioSource.loop = true;
+        musicAudioSource.Play();
     }
 
     public void PlayGhostDownLoop()
     {
-        audioSource.clip = backgroundMusic[2];
-        audioSource.loop = true;
-        audioSource.Play();
+        musicAudioSource.clip = backgroundMusic[2];
+        musicAudioSource.loop = true;
+        musicAudioSource.Play();
     }
 
     public void PlayPowerUpLoop()
     {
-        audioSource.clip = backgroundMusic[3];
-        audioSource.loop = true;
-        audioSource.Play();
+        musicAudioSource.clip = backgroundMusic[3];
+        musicAudioSource.loop = true;
+        musicAudioSource.Play();
     }
 }
