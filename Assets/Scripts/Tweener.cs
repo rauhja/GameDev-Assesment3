@@ -10,22 +10,24 @@ public class Tweener : MonoBehaviour
     private int currentWaypoint = 0;
     public float speed;
     private Animator animator;
-    private static readonly int WalkLeftAnim = Animator.StringToHash("WalkLeftAnim");
-    private static readonly int WalkRightAnim = Animator.StringToHash("WalkRightAnim");
-    private static readonly int WalkDownAnim = Animator.StringToHash("WalkDownAnim");
-    private static readonly int WalkUpAnim = Animator.StringToHash("WalkUpAnim");
 
+    public AudioClip walkSfx;
+    private AudioSource audioSource;
+
+    private bool isWalking = false;
+    
     // Start is called before the first frame update
     void Start()
     {
         waypoints = new Vector2[]
         {
-             new Vector2(-12.5f, 13.5f),
-             new Vector2(-7.5f, 13.5f),
-             new Vector2(-7.5f, 9.5f),
-             new Vector2(-12.5f, 9.5f)
+            new Vector2(-12.5f, 13.5f),
+            new Vector2(-7.5f, 13.5f),
+            new Vector2(-7.5f, 9.5f),
+            new Vector2(-12.5f, 9.5f)
         };
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         AddTween();
     }
 
@@ -38,6 +40,12 @@ public class Tweener : MonoBehaviour
             {
                 var t = (Time.time - activeTween.StartTime) / activeTween.Duration;
                 activeTween.Target.position = Vector2.Lerp(activeTween.StartPos, activeTween.EndPos,t);
+
+                if (!isWalking)
+                {
+                    PlayWalkSfx();
+                    isWalking = true;
+                }
             }
             else
             {
@@ -56,10 +64,10 @@ public class Tweener : MonoBehaviour
         activeTween = new Tween(transform, startPos, endPos, Time.time, duration);
         
         Vector2 direction = endPos - startPos;
-        animator.ResetTrigger(WalkRightAnim);
-        animator.ResetTrigger(WalkLeftAnim);
-        animator.ResetTrigger(WalkDownAnim);
-        animator.ResetTrigger(WalkUpAnim);
+        animator.ResetTrigger("WalkRightAnim");
+        animator.ResetTrigger("WalkLeftAnim");
+        animator.ResetTrigger("WalkDownAnim");
+        animator.ResetTrigger("WalkUpAnim");
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             animator.SetTrigger(direction.x > 0 ? "WalkRightAnim" : "WalkLeftAnim");
@@ -70,5 +78,15 @@ public class Tweener : MonoBehaviour
         }
         
         currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
+    }
+
+    public void PlayWalkSfx()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = walkSfx;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 }
