@@ -10,7 +10,11 @@ public class Tweener : MonoBehaviour
     private int currentWaypoint = 0;
     public float speed;
     private Animator animator;
-    
+    private static readonly int WalkLeftAnim = Animator.StringToHash("WalkLeftAnim");
+    private static readonly int WalkRightAnim = Animator.StringToHash("WalkRightAnim");
+    private static readonly int WalkDownAnim = Animator.StringToHash("WalkDownAnim");
+    private static readonly int WalkUpAnim = Animator.StringToHash("WalkUpAnim");
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,10 @@ public class Tweener : MonoBehaviour
         activeTween = new Tween(transform, startPos, endPos, Time.time, duration);
         
         Vector2 direction = endPos - startPos;
+        animator.ResetTrigger(WalkRightAnim);
+        animator.ResetTrigger(WalkLeftAnim);
+        animator.ResetTrigger(WalkDownAnim);
+        animator.ResetTrigger(WalkUpAnim);
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             animator.SetTrigger(direction.x > 0 ? "WalkRightAnim" : "WalkLeftAnim");
