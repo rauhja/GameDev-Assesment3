@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,9 +111,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fb9bf9fc920142959cb6bff037c70f9
-      internalID: -1933480557
+      spriteID: 947193e7d7efd4a33964f606b78e8d36
+      internalID: -1016048124
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: GhostScared_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5cb998daefab40d1b699e686e4f04f9
-      internalID: 1360376486
+      spriteID: 7e5b37031544c491ba9f6b6b074a04ea
+      internalID: -386345531
       vertices: []
       indices: 
       edges: []
@@ -154,8 +154,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3828a294fd9c14ef486325da07bbc310
-      internalID: -2083121636
+      spriteID: 7dd171238c56344599867db6280fe967
+      internalID: 1024962628
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: GhostScared_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 571e795f5ef07431680059fb0c251878
-      internalID: 118033370
+      spriteID: a587c06a981264f9c8b293fabc41149b
+      internalID: -792109956
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GhostScared_0: -1933480557
-      GhostScared_1: 1360376486
-      GhostScared_2: -2083121636
-      GhostScared_3: 118033370
+      GhostScared_0: -1016048124
+      GhostScared_1: -386345531
+      GhostScared_2: 1024962628
+      GhostScared_3: -792109956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

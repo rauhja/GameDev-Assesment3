@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,8 +112,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a82d0c8f766741ddb9d9f6133530a6e
-      internalID: -1130456027
+      spriteID: 655e754b23d7d41058394474829be8dc
+      internalID: -739218931
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: PacStudentDead_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 762ab0bf2144941c49db7982339a2208
-      internalID: 1194003262
+      spriteID: d9195e8884d8042b98b7f995b788b51f
+      internalID: -1230590305
       vertices: []
       indices: 
       edges: []
@@ -152,10 +152,10 @@ TextureImporter:
       name: PacStudentDead_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9421ecbe17b864af5b0302b3cf30168e
-      internalID: 88597425
+      spriteID: d7c4f37d59e9c4d99956775921559977
+      internalID: -566213357
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: PacStudentDead_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81051f64e46b486fb745d01c044d622
-      internalID: 1149019384
+      spriteID: 66196b65285454023a722089106612d7
+      internalID: -1597915886
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: PacStudentDead_4
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4df283441a926463d8e0ceb98fcf5d83
-      internalID: -1853267772
+      spriteID: ca7babd57eef94c7db4a07a36f8fcbd1
+      internalID: 1535003596
       vertices: []
       indices: 
       edges: []
@@ -222,11 +222,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PacStudentDead_0: -1130456027
-      PacStudentDead_1: 1194003262
-      PacStudentDead_2: 88597425
-      PacStudentDead_3: 1149019384
-      PacStudentDead_4: -1853267772
+      PacStudentDead_0: -739218931
+      PacStudentDead_1: -1230590305
+      PacStudentDead_2: -566213357
+      PacStudentDead_3: -1597915886
+      PacStudentDead_4: 1535003596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

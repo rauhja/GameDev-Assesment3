@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,9 +111,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e0cbb8f977124235b33328d0922a763
-      internalID: -1431387748
+      spriteID: fcd5e9c7e7bdc4abcb5e829cde73ed2c
+      internalID: 1737169996
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: WalkBehind_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce7e622798f544a54848229242c26f14
-      internalID: -509164587
+      spriteID: be30217de2486454bbb4b6bcf31f2b7b
+      internalID: 698702785
       vertices: []
       indices: 
       edges: []
@@ -154,8 +154,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622468f309851403ebf4080f63a96436
-      internalID: 60146894
+      spriteID: 719cfa49973ca4fe19aeb9621a510b02
+      internalID: -1922054946
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: WalkBehind_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6973f5f15fb4431789b5ca943ec311b
-      internalID: -1096537512
+      spriteID: b84218a9b22a745738eacf61ee622232
+      internalID: 444047493
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WalkBehind_0: -1431387748
-      WalkBehind_1: -509164587
-      WalkBehind_2: 60146894
-      WalkBehind_3: -1096537512
+      WalkBehind_0: 1737169996
+      WalkBehind_1: 698702785
+      WalkBehind_2: -1922054946
+      WalkBehind_3: 444047493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

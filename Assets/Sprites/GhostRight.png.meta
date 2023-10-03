@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,9 +111,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34379bfcc05ce46f4bb7de7a29ab479c
-      internalID: -965617395
+      spriteID: 42548f88864f54fb2ad132208a876716
+      internalID: -65652226
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: GhostRight_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0296eb1de9514124996858bca9b7b55
-      internalID: 88609465
+      spriteID: 0a9a6545a7a4c45d9a72dd7d9ff1f523
+      internalID: 1062303622
       vertices: []
       indices: 
       edges: []
@@ -154,8 +154,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae4ba8a4e4394c27a5d2e9e9273fa35
-      internalID: 1368339358
+      spriteID: e4f34bc8169e741dfaa1c371cf862d5a
+      internalID: 1328904776
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: GhostRight_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b8861c9d7024720b85e6f1b1c6a81d
-      internalID: -1900717295
+      spriteID: d53e3c5877a2e48f9a3bd22af9ddcb15
+      internalID: 2126287052
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GhostRight_0: -965617395
-      GhostRight_1: 88609465
-      GhostRight_2: 1368339358
-      GhostRight_3: -1900717295
+      GhostRight_0: -65652226
+      GhostRight_1: 1062303622
+      GhostRight_2: 1328904776
+      GhostRight_3: 2126287052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
