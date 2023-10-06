@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -51,9 +48,9 @@ public class LevelGenerator : MonoBehaviour
             for (var j = 0; j < width; j++)
             {
                 var tileType = levelMap[i, j];
-                GameObject tilePrefab = tilePrefabs[tileType];
-                Vector2 position = new Vector2(-(width - j)+0.5f, (height - i)-0.5f);
-                GameObject setTile = Instantiate(tilePrefab, position, Quaternion.identity, parentQuadrant.transform);
+                var tilePrefab = tilePrefabs[tileType];
+                var position = new Vector2(-(width - j)+0.5f, (height - i)-0.5f);
+                var setTile = Instantiate(tilePrefab, position, Quaternion.identity, parentQuadrant.transform);
                 CheckTileRotation(i,j,setTile);
             }
         }
@@ -61,28 +58,34 @@ public class LevelGenerator : MonoBehaviour
 
     void MirrorLevel()
     {
-        var topRightQ = Instantiate(parentQuadrant, transform);
-        foreach (Transform child in topRightQ.transform)
+        var topRight = Instantiate(parentQuadrant, transform);
+        topRight.transform.Rotate(0,180,0);
+        foreach (Transform child in topRight.transform)
         {
-            Vector3 position = child.position;
-            position.x *= -1;
-            child.position = position;
+            if (child.CompareTag("PowerPellet"))
+            {
+                child.localScale = new Vector3(-1, 1, 1);
+            }
         }
-
-        var bottomHalf = new GameObject("BottomHalf");
-        bottomHalf.transform.parent = transform;
-        MirrorVertically(parentQuadrant, bottomHalf.transform);
-        MirrorVertically(topRightQ, bottomHalf.transform);
-    }
-
-    void MirrorVertically(GameObject original, Transform parent)
-    {
-        var copy = Instantiate(original, parent);
-        foreach (Transform child in copy.transform)
+        var bottomRight = Instantiate(topRight, transform);
+        bottomRight.transform.Rotate(180,0,0);
+        bottomRight.transform.position = new Vector3(0, 1, 0);
+        foreach (Transform child in bottomRight.transform)
         {
-            Vector3 position = child.position;
-            position.y = (position.y-1) * -1;
-            child.position = position;
+            if (child.CompareTag("PowerPellet"))
+            {
+                child.localScale = new Vector3(-1, -1, 1);
+            }
+        }
+        var bottomLeft = Instantiate(parentQuadrant, transform);
+        bottomLeft.transform.Rotate(180,0,0);
+        bottomLeft.transform.position = new Vector3(0, 1, 0);
+        foreach (Transform child in bottomLeft.transform)
+        {
+            if (child.CompareTag("PowerPellet"))
+            {
+                child.localScale = new Vector3(1, -1, 1);
+            }
         }
     }
 
@@ -104,14 +107,9 @@ public class LevelGenerator : MonoBehaviour
                 setTile.transform.Rotate(0,0,90);
             }
         }
-
+        
         var middleRowMirror = Instantiate(middleRow, transform);
-        foreach (Transform child in middleRowMirror.transform)
-        {
-            Vector3 position = child.position;
-            position.x *= -1;
-            child.position = position;
-        }
+        middleRowMirror.transform.Rotate(0,180,0);
     }
 
     void CheckTileRotation(int i, int j, GameObject tile)
@@ -138,21 +136,51 @@ public class LevelGenerator : MonoBehaviour
 
             if (j > 0)
             {
+                var leftNeighborTile = levelMap[i, j - 1];
                 if (i == 0)
                 {
+                    if (leftNeighborTile == 0 || leftNeighborTile == 1)
+                    {
+                        tile.transform.Rotate(0,0,0);
+                        return;
+                    }
                     tile.transform.Rotate(0,0,270);
                     return;
                 }
                 
-                var leftNeighborTile = levelMap[i, j - 1];
                 var aboveNeighborTile = levelMap[i - 1, j];
                 
-                if (leftNeighborTile == 2 && aboveNeighborTile == 2)
+                if (leftNeighborTile == 2)
+                {
+                    if (aboveNeighborTile == 2)
+                    {
+                        tile.transform.Rotate(0,0,180);
+                        return;
+                    }
+
+                    if (aboveNeighborTile == 1)
+                    {
+                        tile.transform.Rotate(0,0,180);
+                        return;
+                    }
+                }
+
+                if (leftNeighborTile == 0 || leftNeighborTile == 5 || leftNeighborTile == 6)
+                {
+                    if (aboveNeighborTile == 0)
+                    {
+                        tile.transform.Rotate(0,0,0);
+                        return;
+                    }
+                    tile.transform.Rotate(0,0,90);
+                    return;
+                }
+
+                if (leftNeighborTile == 1 && aboveNeighborTile == 2)
                 {
                     tile.transform.Rotate(0,0,180);
                     return;
                 }
-                
                 tile.transform.Rotate(0,0,270);
             }
         }
@@ -167,7 +195,12 @@ public class LevelGenerator : MonoBehaviour
                 {
                     tile.transform.Rotate(0,0,90);
                 }
-                
+
+                if (aboveNeighborTile == 1 && i>1)
+                {
+                    tile.transform.Rotate(0,0,0);
+                    return;
+                }
                 tile.transform.Rotate(0,0,90);
             }
             
@@ -184,6 +217,19 @@ public class LevelGenerator : MonoBehaviour
                 {
                     tile.transform.Rotate(0,0,90);
                 }
+
+                if (i > 0)
+                {
+                    var aboveNeighbourType = levelMap[i - 1, j];
+                    if (leftNeighborType == 2)
+                    {
+                        if (aboveNeighbourType == 7 || aboveNeighbourType == 1 || aboveNeighbourType == 2)
+                        {
+                            tile.transform.Rotate(0,0,90);
+                        }
+                    }
+                    
+                }
             }
         }
 
@@ -199,16 +245,17 @@ public class LevelGenerator : MonoBehaviour
                     var belowNeighborTile = levelMap[i + 1, j];
                     if (belowNeighborTile == 4)
                     {
-                        tile.transform.Rotate(0,0,0);
+                        tile.transform.Rotate(0,0,270);
                         return;
                     }
 
                     if (belowNeighborTile == 3)
                     {
-                        tile.transform.Rotate(0,0,180);
+                        tile.transform.Rotate(0,0,90);
                         return;
                     }
-                    tile.transform.Rotate(0,0,270);
+                    tile.transform.Rotate(0,0,180);
+                    return;
                 }
 
                 if (aboveNeighborTile == 3)
@@ -216,9 +263,14 @@ public class LevelGenerator : MonoBehaviour
                     var belowNeighborTile = levelMap[i + 1, j];
                     if (belowNeighborTile == 4)
                     {
-                        tile.transform.Rotate(0,0,90);
+                        tile.transform.Rotate(0,0,0);
                         return;
                     }
+                    tile.transform.Rotate(0,0,180);
+                }
+
+                if (aboveNeighborTile == 0 || aboveNeighborTile == 5 || aboveNeighborTile == 6)
+                {
                     tile.transform.Rotate(0,0,270);
                 }
             }
@@ -226,6 +278,16 @@ public class LevelGenerator : MonoBehaviour
             if (leftNeighborTile == 3)
             {
                 if (aboveNeighborTile == 4)
+                {
+                    tile.transform.Rotate(0,0,180);
+                }
+
+                if (aboveNeighborTile == 3)
+                {
+                    tile.transform.Rotate(0,0,180);
+                }
+                
+                if (aboveNeighborTile == 0 || aboveNeighborTile == 5 || aboveNeighborTile == 6)
                 {
                     tile.transform.Rotate(0,0,270);
                 }
@@ -235,12 +297,17 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (aboveNeighborTile == 0 || aboveNeighborTile == 5 || aboveNeighborTile == 6)
                 {
-                    tile.transform.Rotate(0,0,90);
+                    tile.transform.Rotate(0,0,0);
                 }
 
                 if (aboveNeighborTile == 4 || aboveNeighborTile == 3)
                 {
-                    tile.transform.Rotate(0,0,180);
+                    tile.transform.Rotate(0,0,90);
+                }
+
+                if (aboveNeighborTile == 7)
+                {
+                    tile.transform.Rotate(0,0,90);
                 }
             }
         }
@@ -289,10 +356,23 @@ public class LevelGenerator : MonoBehaviour
             if (j > 0)
             {
                 var leftNeighborTile = levelMap[i, j-1];
-                
-                if (leftNeighborTile == 2 || leftNeighborTile == 7)
+                if (i > 0)
                 {
-                    tile.transform.Rotate(0,0,0);
+                    var aboveNeighborTile = levelMap[i - 1, j];
+                    if (leftNeighborTile is 3 or 4)
+                    {
+                        tile.transform.Rotate(0,0,270);
+                        return;
+                    }
+                    if (leftNeighborTile is 2 or 7)
+                    {
+                        tile.transform.Rotate(0,0,0);
+
+                        if (leftNeighborTile == 7 || aboveNeighborTile == 1)
+                        {
+                            tile.transform.Rotate(0,0,90);
+                        }
+                    }
                 }
             }
         }
