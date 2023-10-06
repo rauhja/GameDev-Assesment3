@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="ChangeListManager">
     <list default="true" id="e7ae11da-998c-408e-9b92-29bbdc1c6b69" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tile_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tile_00.png.meta" afterDir="false" />
@@ -14,6 +15,22 @@
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/WalkFront.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WalkFront.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/WalkLeft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WalkLeft.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/WalkRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WalkRight.png.meta" afterDir="false" />
+=======
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7ae11da-998c-408e-9b92-29bbdc1c6b69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assessment 3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assessment 3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerPellet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PowerPellet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tile_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tile_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tile_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tile_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TopLeft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TopLeft.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tile_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tile_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +40,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
+=======
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+>>>>>>> Stashed changes
   <component name="ProjectId" id="2VpRoirqcXkWPXQVBvgIa8RUxiP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,10 +62,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< Updated upstream
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature-audio&quot;,
+=======
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature-levelgenerator&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+>>>>>>> Stashed changes
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -95,6 +136,15 @@
       <updated>1695531212523</updated>
       <workItem from="1695531215916" duration="6000" />
       <workItem from="1696127882519" duration="3000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1696230034209" duration="9106000" />
+      <workItem from="1696247561874" duration="2835000" />
+      <workItem from="1696315792363" duration="17026000" />
+      <workItem from="1696546851430" duration="9000" />
+      <workItem from="1696565372321" duration="20804000" />
+      <workItem from="1696588145512" duration="8249000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -103,6 +153,20 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+<<<<<<< Updated upstream
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+>>>>>>> Stashed changes
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
