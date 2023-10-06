@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - corner
+  - PowerPellet
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - PacStudent
+  - Ghost
+  - Pellet
+  - Walls
   - 
   - 
   - 
@@ -40,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 1659770799
+    locked: 0
+  - name: Pellets
+    uniqueID: 3130137547
+    locked: 0
+  - name: Pacstudent
+    uniqueID: 3726932253
     locked: 0
