@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4567459784166489612}
   - component: {fileID: 4567459784166489843}
   - component: {fileID: 4567459784166489614}
-  - component: {fileID: 378725763}
   - component: {fileID: 378725768}
   m_Layer: 6
   m_Name: PacStudent
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4567459784166489612
 SpriteRenderer:
@@ -135,20 +134,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &378725763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4567459784166489842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacf65b81361448eaa754ddff705fff8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  walkSfx: {fileID: 8300000, guid: 9813f5f475c0b4f00b9027843f3887ce, type: 3}
 --- !u!82 &378725768
 AudioSource:
   m_ObjectHideFlags: 0
