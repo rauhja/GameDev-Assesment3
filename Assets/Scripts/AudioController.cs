@@ -5,14 +5,19 @@ using UnityEngine.SceneManagement;
 public class AudioController : MonoBehaviour
 {
     public AudioClip[] backgroundMusic;
-    private AudioSource musicAudioSource;
+    private AudioSource _musicAudioSource;
     
     // Start is called before the first frame update
     private void Start()
     {
-        musicAudioSource = GetComponent<AudioSource>();
+        _musicAudioSource = GetComponent<AudioSource>();
         SceneManager.sceneLoaded += OnSceneLoaded;
         PlayMenuMusic();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -28,37 +33,37 @@ public class AudioController : MonoBehaviour
     }
     void PlayMenuMusic()
     {
-        musicAudioSource.clip = backgroundMusic[0];
-        musicAudioSource.loop = true;
-        musicAudioSource.Play();
+        _musicAudioSource.clip = backgroundMusic[0];
+        _musicAudioSource.loop = true;
+        _musicAudioSource.Play();
     }
 
     void PlayIntroMusic()
     {
-        musicAudioSource.clip = backgroundMusic[1];
-        musicAudioSource.Play();
+        _musicAudioSource.clip = backgroundMusic[1];
+        _musicAudioSource.Play();
         
         Invoke(nameof(PlayMainLoop), backgroundMusic[1].length);
     }
 
     void PlayMainLoop()
     {
-        musicAudioSource.clip = backgroundMusic[2];
-        musicAudioSource.loop = true;
-        musicAudioSource.Play();
+        _musicAudioSource.clip = backgroundMusic[2];
+        _musicAudioSource.loop = true;
+        _musicAudioSource.Play();
     }
 
     public void PlayGhostDownLoop()
     {
-        musicAudioSource.clip = backgroundMusic[3];
-        musicAudioSource.loop = true;
-        musicAudioSource.Play();
+        _musicAudioSource.clip = backgroundMusic[3];
+        _musicAudioSource.loop = true;
+        _musicAudioSource.Play();
     }
 
     public void PlayPowerUpLoop()
     {
-        musicAudioSource.clip = backgroundMusic[4];
-        musicAudioSource.loop = true;
-        musicAudioSource.Play();
+        _musicAudioSource.clip = backgroundMusic[4];
+        _musicAudioSource.loop = true;
+        _musicAudioSource.Play();
     }
 }
