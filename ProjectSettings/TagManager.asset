@@ -6,6 +6,9 @@ TagManager:
   tags:
   - corner
   - PowerPellet
+  - ExitButton
+  - Level1Button
+  - ScaredText
   layers:
   - Default
   - TransparentFX
